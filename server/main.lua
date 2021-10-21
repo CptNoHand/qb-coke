@@ -41,7 +41,7 @@ AddEventHandler('qb-coke:server:processCrack', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local cokebaggy = Player.Functions.GetItemByName('cokebaggy')
 
-    if Player.PlayerData.gang.name == "ballas" then
+    if Player.PlayerData.gang.name == "ballas" or Player.PlayerData.gang.name == "marabunta" or Player.PlayerData.gang.name == "vagos" then
         if Player.PlayerData.items ~= nil then 
             if cokebaggy ~= nil then 
                 if cokebaggy.amount >= 2 then 

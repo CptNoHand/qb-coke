@@ -103,13 +103,13 @@ Citizen.CreateThread(function()
         local PlayerPed = PlayerPedId()
         local PlayerPos = GetEntityCoords(PlayerPed)
 
-        local distance = #(PlayerPos - vector3(-1078.21, -1678.42, 4.57))
+        local distance = #(PlayerPos - vector3(2433.29, 4968.62, 42.35))
         
         if distance < 6 then
             inRange = true
 
             if distance < 2 then
-                DrawText3Ds(-1078.21, -1678.42, 4.57, "[G] Process Crack")
+                DrawText3Ds(2433.29, 4968.62, 42.35, "[G] Process Crack")
                 if IsControlJustPressed(0, 47) then
                     TriggerServerEvent("qb-coke:server:processCrack")
                 end
