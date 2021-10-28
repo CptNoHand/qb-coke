@@ -63,7 +63,7 @@ Citizen.CreateThread(function()
         local distance5 = #(PlayerPos - vector3(5414.23, -5211.28, 34.31))
         local distance6 = #(PlayerPos - vector3(5404.32, -5203.75, 33.34))
         
-        if distance1 < 15 then
+        if distance1 < 50 then
             inRange = true
 
             if distance1 < 2 then
@@ -168,7 +168,7 @@ function pickProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getleaf")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
@@ -185,7 +185,7 @@ function cokeProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getcoke")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
@@ -202,7 +202,7 @@ function crackProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getcrack")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
