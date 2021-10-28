@@ -56,15 +56,18 @@ Citizen.CreateThread(function()
         local PlayerPed = PlayerPedId()
         local PlayerPos = GetEntityCoords(PlayerPed)
 
-        local distance1 = #(PlayerPos - vector3(509.89, 6478.76, 29.77))
-        local distance2 = #(PlayerPos - vector3(509.47, 6472.89, 29.77))
-        local distance3 = #(PlayerPos - vector3(509.47, 6467.10, 29.74))
+        local distance1 = #(PlayerPos - vector3(5397.89, -5207.95, 33.25))
+        local distance2 = #(PlayerPos - vector3(5406.64, -5214.29, 34.26))
+        local distance3 = #(PlayerPos - vector3(5417.07, -5222.43, 34.93))
+        local distance4 = #(PlayerPos - vector3(5421.23, -5216.68, 34.93))
+        local distance5 = #(PlayerPos - vector3(5414.23, -5211.28, 34.31))
+        local distance6 = #(PlayerPos - vector3(5404.32, -5203.75, 33.34))
         
         if distance1 < 15 then
             inRange = true
 
             if distance1 < 2 then
-                DrawText3Ds(509.89, 6478.76, 29.77, "[G] Start Picking")
+                DrawText3Ds(5397.89, -5207.95, 33.25, "[G] Start Picking")
                 if IsControlJustPressed(0, 47) then
                     PrepareAnim()
                     PickMinigame()
@@ -72,7 +75,7 @@ Citizen.CreateThread(function()
             end
 
             if distance2 < 2 then
-                DrawText3Ds(509.47, 6472.89, 29.77, "[G] Start Picking")
+                DrawText3Ds(5406.64, -5214.29, 34.26, "[G] Start Picking")
                 if IsControlJustPressed(0, 47) then
                     PrepareAnim()
                     PickMinigame()
@@ -80,7 +83,31 @@ Citizen.CreateThread(function()
             end
 
             if distance3 < 2 then
-                DrawText3Ds(509.47, 6467.10, 29.74, "[G] Start Picking")
+                DrawText3Ds(5417.07, -5222.43, 34.93, "[G] Start Picking")
+                if IsControlJustPressed(0, 47) then
+                    PrepareAnim()
+                    PickMinigame()
+                end
+            end
+
+            if distance4 < 2 then
+                DrawText3Ds(5421.23, -5216.68, 34.93, "[G] Start Picking")
+                if IsControlJustPressed(0, 47) then
+                    PrepareAnim()
+                    PickMinigame()
+                end
+            end
+
+            if distance5 < 2 then
+                DrawText3Ds(5414.23, -5211.28, 34.31, "[G] Start Picking")
+                if IsControlJustPressed(0, 47) then
+                    PrepareAnim()
+                    PickMinigame()
+                end
+            end
+
+            if distance6 < 2 then
+                DrawText3Ds(5404.32, -5203.75, 33.34, "[G] Start Picking")
                 if IsControlJustPressed(0, 47) then
                     PrepareAnim()
                     PickMinigame()
@@ -124,54 +151,6 @@ Citizen.CreateThread(function()
     end
 end)
 
-
-Citizen.CreateThread(function()
-    while true do
-        local inRange = false
-
-        local PlayerPed = PlayerPedId()
-        local PlayerPos = GetEntityCoords(PlayerPed)
-
-        local distance1 = #(PlayerPos - vector3(509.89, 6478.76, 29.77))
-        local distance2 = #(PlayerPos - vector3(509.47, 6472.89, 29.77))
-        local distance3 = #(PlayerPos - vector3(509.47, 6467.10, 29.74))
-        
-        if distance1 < 15 then
-            inRange = true
-
-            if distance1 < 2 then
-                DrawText3Ds(509.89, 6478.76, 29.77, "[G] Start Picking")
-                if IsControlJustPressed(0, 47) then
-                    PrepareAnim()
-                    PickMinigame()
-                end
-            end
-
-            if distance2 < 2 then
-                DrawText3Ds(509.47, 6472.89, 29.77, "[G] Start Picking")
-                if IsControlJustPressed(0, 47) then
-                    PrepareAnim()
-                    PickMinigame()
-                end
-            end
-
-            if distance3 < 2 then
-                DrawText3Ds(509.47, 6467.10, 29.74, "[G] Start Picking")
-                if IsControlJustPressed(0, 47) then
-                    PrepareAnim()
-                    PickMinigame()
-                end
-            end
-            
-        end
-
-        if not inRange then
-            Citizen.Wait(2000)
-        end
-        Citizen.Wait(3)
-    end
-end)
-
 RegisterNetEvent('qb-coke:client:grindleavesMinigame')
 AddEventHandler('qb-coke:client:grindleavesMinigame', function(source)
     PrepareProcessAnim()
@@ -184,7 +163,7 @@ AddEventHandler('qb-coke:client:processCrack', function(source)
 end)
 
 function pickProcess()
-    QBCore.Functions.Progressbar("grind_coke", "Picking Coca Leaves ..", math.random(80000,120000), false, true, {
+    QBCore.Functions.Progressbar("grind_coke", "Picking Coca Leaves ..", math.random(120000,180000), false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
