@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
 
         local distance1 = #(PlayerPos - vector3(5397.89, -5207.95, 33.25))
         local distance2 = #(PlayerPos - vector3(5406.64, -5214.29, 34.26))
-        local distance3 = #(PlayerPos - vector3(5417.07, -5222.43, 34.93))
+        local distance3 = #(PlayerPos - vector3(5417.99, -5223.28, 34.99))
         local distance4 = #(PlayerPos - vector3(5421.23, -5216.68, 34.93))
         local distance5 = #(PlayerPos - vector3(5414.23, -5211.28, 34.31))
         local distance6 = #(PlayerPos - vector3(5404.32, -5203.75, 33.34))
@@ -83,7 +83,7 @@ Citizen.CreateThread(function()
             end
 
             if distance3 < 2 then
-                DrawText3Ds(5417.07, -5222.43, 34.93, "[G] Start Picking")
+                DrawText3Ds(5417.99, -5223.28, 34.99, "[G] Start Picking")
                 if IsControlJustPressed(0, 47) then
                     PrepareAnim()
                     PickMinigame()
@@ -168,7 +168,7 @@ function pickProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getleaf")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
@@ -185,7 +185,7 @@ function cokeProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getcoke")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
@@ -202,7 +202,7 @@ function crackProcess()
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
-    }, {}, {}, {}, function() -- Done
+    }, {}, {}, {}, {}, {}, {}, function() -- Done
         TriggerServerEvent("qb-coke:server:getcrack")
         ClearPedTasks(PlayerPedId())
         cokepicking = false
