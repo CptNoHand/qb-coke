@@ -110,7 +110,7 @@ end)
 RegisterServerEvent('qb-coke:server:getcoke')
 AddEventHandler('qb-coke:server:getcoke', function()
     local Player = QBCore.Functions.GetPlayer(source)
-    Player.Functions.AddItem("cokebaggy", 5)
+    Player.Functions.AddItem("cokebaggy", 4)
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cokebaggy'], "add")
 end)
 
