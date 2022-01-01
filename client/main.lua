@@ -180,7 +180,7 @@ function pickProcess()
 end
 
 function cokeProcess()
-    QBCore.Functions.Progressbar("grind_coke", "Process Coke Leaves ..", math.random(10000, 12000), false, true, {
+    QBCore.Functions.Progressbar("grind_coke", "Process Coke Leaves ..", math.random(15000, 20000), false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -197,7 +197,7 @@ function cokeProcess()
 end
 
 function crackProcess()
-    QBCore.Functions.Progressbar("grind_coke", "Process Crack ..", math.random(10000, 12000), false, true, {
+    QBCore.Functions.Progressbar("grind_coke", "Process Crack ..", math.random(16000, 22000), false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

@@ -17,8 +17,8 @@ AddEventHandler('qb-coke:server:grindleaves', function()
         for k, v in pairs(Player.PlayerData.items) do 
             if cocaleaf ~= nil then
                 if ItemList[Player.PlayerData.items[k].name] ~= nil then 
-                    if Player.PlayerData.items[k].name == "cocaleaf" and Player.PlayerData.items[k].amount >= 2 then 
-                        Player.Functions.RemoveItem("cocaleaf", 2)
+                    if Player.PlayerData.items[k].name == "cocaleaf" and Player.PlayerData.items[k].amount >= 8 then 
+                        Player.Functions.RemoveItem("cocaleaf", 8)
                         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cocaleaf'], "remove")
 
                         TriggerClientEvent("qb-coke:client:grindleavesMinigame", src)
@@ -44,9 +44,9 @@ AddEventHandler('qb-coke:server:processCrack', function()
     if Player.PlayerData.gang.name == "ballas" or Player.PlayerData.gang.name == "marabunta" or Player.PlayerData.gang.name == "vagos" then
         if Player.PlayerData.items ~= nil then 
             if cokebaggy ~= nil then 
-                if cokebaggy.amount >= 2 then 
+                if cokebaggy.amount >= 4 then 
 
-                    Player.Functions.RemoveItem("cokebaggy", 2, false)
+                    Player.Functions.RemoveItem("cokebaggy", 4, false)
                     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['cokebaggy'], "remove")
 
                     TriggerClientEvent("qb-coke:client:processCrack", src)
@@ -103,21 +103,21 @@ end)
 RegisterServerEvent('qb-coke:server:getleaf')
 AddEventHandler('qb-coke:server:getleaf', function()
     local Player = QBCore.Functions.GetPlayer(source)
-    Player.Functions.AddItem("cocaleaf", 5)
+    Player.Functions.AddItem("cocaleaf", 4)
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cocaleaf'], "add")
 end)
 
 RegisterServerEvent('qb-coke:server:getcoke')
 AddEventHandler('qb-coke:server:getcoke', function()
     local Player = QBCore.Functions.GetPlayer(source)
-    Player.Functions.AddItem("cokebaggy", 1)
+    Player.Functions.AddItem("cokebaggy", 5)
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['cokebaggy'], "add")
 end)
 
 RegisterServerEvent('qb-coke:server:getcrack')
 AddEventHandler('qb-coke:server:getcrack', function()
     local Player = QBCore.Functions.GetPlayer(source)
-    Player.Functions.AddItem("crack_baggy", 1)
+    Player.Functions.AddItem("crack_baggy", 2)
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['crack_baggy'], "add")
 end)
 
