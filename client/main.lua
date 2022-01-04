@@ -163,7 +163,7 @@ AddEventHandler('qb-coke:client:processCrack', function(source)
 end)
 
 function pickProcess()
-    QBCore.Functions.Progressbar("grind_coke", "Picking Coca Leaves ..", math.random(120000,180000), false, true, {
+    QBCore.Functions.Progressbar("grind_coke", "Picking Coca Leaves ..", math.random(50000,100000), false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
